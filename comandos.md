@@ -68,6 +68,50 @@ DELETE FROM nome_da_tabela WHERE nome_do_campo = valor_do_campo;
 DESCRIBE nome_da_tabela ;
 ```
 
+#### Ordena e limita uma ordem especifica (DESC, ASC)
+``` sql
+SELECT *
+FROM    nome_da_tabela
+ORDER BY nome_do_campo DESC
+LIMIT valor;
+```
+
+#### Traz os valores sem repetições
+``` sql
+SELECT DISTINCT nome_do_campo
+FROM nome_da_tabela ;
+```
+
+#### Traz valores entre um e outro
+``` sql
+SELECT *
+FROM nome_da_tabela
+WHERE nome_do_campo BETWEEN valor_1 AND valor_2;
+```
+
+#### Traz valores especificos (String, Num)
+``` sql
+SELECT *
+FROM nome_da_tabela
+WHERE nome_do_campo IN ('valor_do_campo', 'valor_do_campo');
+```
+
+### usando operadores { =, <, >, >=, <=, <>, != }
+``` sql
+SELECT *
+FROM nome_da_tabela
+WHERE valor_do_campo operadores valor;
+
+```
+
+### usando filtro de semelhança
+``` sql
+SELECT *
+FROM nome_da_tabela
+WHERE valor_do_campo LIKE valor;
+
+```
+
 ### Usando JOIN
 Junta os valores de duas tabelas
 ``` sql
