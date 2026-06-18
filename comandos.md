@@ -89,6 +89,36 @@ FROM nome_da_tabela
 WHERE valor_do_campo LIKE valor;
 
 ```
+### usando COUNT
+Traz a quantidade do valor da busca
+``` sql
+SELECT COUNT(*) AS nome_intuitivo
+FROM nome_da_tabela;
+```
+
+### usando SUM
+soma todos os valores de uma coluna
+``` sql
+SELECT SUM(nome_do_campo) AS nome_intuitivo
+FROM nome_da_tabela;
+```
+
+### usando AVG
+calcula a media de uma coluna
+``` sql
+SELECT AVG(nome_do_campo) AS nome_intuitivo
+FROM nome_da_tabela;
+```
+
+### usando GROUP BY
+agrupa registros de um mesmo tipo de forma independente (funciona sem ser operação matematica)
+``` sql
+SELECT
+    nome_do_campo,
+    ROUND(SUM(valor),2) AS nome_intuitivo
+FROM nome_tabela
+GROUP BY nome_do_campo;
+```
 
 ### Usando JOIN
 Junta os valores de duas tabelas
@@ -99,6 +129,27 @@ SELECT
 FROM    tabela_1
 JOIN tabela_2 ON tabela_1.valor_do_id = tabela_2.valor_do_fk;
 ```
+### Usando {left/right} join
+trazendo todos os valores à esquerda(ideia de conjuntos)
+``` sql
+SELECT 
+    nome_tabela.nome_campo,
+    nome_tabela.nome_campo
+FROM nome_tabela1
+LEFT JOIN nome_tabela2
+ON nome_tabela.valor_do_id = nome_tabela.valor_do_fk;
+```
+### Usando SubQuery
+Seleciona a quantidade de valores minimas(MIN) ou (MAX) da tabela
+``` sql
+SELECT *
+FROM nome_da_tabela
+WHERE nome_do_campo = (
+    SELECT MIN(nome_do_campo)
+    FROM nome_da_tabela
+);
+```
+
 ***
 ## Classificação (DDL, DML e DQL)
 

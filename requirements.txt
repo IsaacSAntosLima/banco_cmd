@@ -1,0 +1,4 @@
+
+mysql-connector-python
+python-dotenv
+# pip3 install -r requirements.txt
