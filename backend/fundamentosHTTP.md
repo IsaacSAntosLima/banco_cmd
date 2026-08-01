@@ -28,7 +28,7 @@ A diferença é que o TypeScript é mais maleavel a certos comandos e declaraç�
 ```
 1. Java
 2.Python
-3.ThypeScript
+3.TypeScript
 4.PHP
 5.c#
 6.Ruby
@@ -54,7 +54,7 @@ A diferença é que o TypeScript é mais maleavel a certos comandos e declaraç�
 ## **2.** API
 >O que é API?
 ```
-API é o que garante a correlação entre dois ou mais programas.
+API é o que garante a correlação entre dois ou mais partes.
 ```
 
 >Cite e defina RESTful (REST), SOAP e GraphQL
@@ -73,7 +73,7 @@ GraphQL Permite a solicitação de dados especificos, evitando informações des
 |-------------|------------|
 | SELECT      | GET        |
 | INSERT      | POST       |
-| UPDATE      | PUT        
+| UPDATE      | PUT/PATH    
 | DELETE      | DELETE     |
 
 
@@ -110,11 +110,5 @@ Sua estrutura é composta por objetos, delimitados por chaves {}, e listas (arra
 
 >Como se chama o arquivo que temos que criar assim que começamos um projeto python? e para que serve? e como executá-lo?
 ```
-O arquivo que criamos ao iniciar um projeto em Python chama-se main.py.
-
-Ele serve como o arquivo principal do projeto, sendo o ponto de entrada da aplicação. É nele que o programa começa a ser executado e onde geralmente fica a função principal ou as chamadas para os demais módulos do projeto
-
-Para executá-lo, basta abrir o terminal na pasta do projeto e utilizar o comando:
-
-python main.py
+O arquivo que criamos ao iniciar um projeto em Python chama-se requeriments.txt
 ```
