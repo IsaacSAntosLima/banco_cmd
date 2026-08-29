@@ -81,35 +81,27 @@ def post_livro():
     dados = request.get_json()
 
     if not dados:
-         return{"mensagem":"lista vazia"}
+        return{"mensagem":"lista vazia"}
 
     if not dados["titulo"]:
-         return{"mensagem":"titulo é obrigatorio!"}
+        return{"mensagem":"titulo é obrigatorio!"}
 
     if not dados["autor"]:
-             return{"mensagem":"autor é obrigatorio!"}
+        return{"mensagem":"autor é obrigatorio!"}
 
     if not dados["ano_publicacao"]:
-             return{"mensagem":"ano da publicação é obrigatorio!"}
+        return{"mensagem":"ano da publicação é obrigatorio!"}
 
     if not dados["fk_categoria_id"]:
-             return{"mensagem":"a categoria é obrigatoria!"}
+        return{"mensagem":"a categoria é obrigatoria!"}
 
     if len(dados)!= 4:
-            return{"mensagem":"atributos inexistentes"}
+        return{"mensagem":"atributos inexistentes"}
 
     titulo = dados["titulo"]
     autor = dados["autor"]
     ano_publicacao = dados["ano_publicacao"]
     fk_categoria_id = dados["fk_categoria_id"]
-
-
-    conexao = mysql.connector.connect(
-        host=os.getenv("HOST"),
-        user=os.getenv("USER"),
-        password=os.getenv("PASSWORD"),
-        database=os.getenv("DATABASE"),
-    )
 
     cursor = conexao.cursor()
     cursor.execute("""
@@ -139,12 +131,7 @@ def put_livro(id):
     ano_publicacao = dados["ano_publicacao"]
     fk_categoria_id = dados["fk_categoria_id"]
     
-    conexao = mysql.connector.connect(
-        host=os.getenv("HOST"),
-        user=os.getenv("USER"),
-        password=os.getenv("PASSWORD"),
-        database=os.getenv("DATABASE"),
-    )
+   
     cursor = conexao.cursor()
     cursor.execute("""
         UPDATE livro 
