@@ -4,12 +4,14 @@ from routes.livros import livros_bp
 
 from routes.alunos import alunos_bp
 
+from routes.emprestimos import emprestimos_bp
 
 
 app = Flask(__name__)
 
 app.register_blueprint(alunos_bp)
 app.register_blueprint(livros_bp)
+app.register_blueprint(emprestimos_bp)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
